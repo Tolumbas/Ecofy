@@ -23,6 +23,15 @@
     <!-- responsive.css -->
     <link rel="stylesheet" href="css/responsive.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+
 </head>
 
 <body>
@@ -71,7 +80,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="main-title text-wht">
-                        <h2 class="title">Contact Page</h2>
+                        <h2 class="title">Demo Page</h2>
                         <h3>touch Us Here</h3>
                     </div>
                 </div>
@@ -91,7 +100,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-3 col-md-3 col-sm-12">
                     <form class="contact-form">
                         <div class="form-group">
                             <label >Name *</label>
@@ -113,10 +122,11 @@
                         <button type="submit" class="default-btn">Submit</button>
                     </form>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="img-wapper">
-                        <img src="images/22.jpg" alt="contact-img">
-                    </div>
+                <div class="col-lg-9 col-md-9 col-sm-12">
+                    <!-- OSM -->
+                    <div id="mapid" style="height:100%">
+                        
+                    </div>                        
                 </div>
             </div>
         </div>
@@ -212,6 +222,7 @@
     <!-- Map -->
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw&callback=initMap"></script>
+    <script src="leaflet.js"></script>
 </body>
 
 </html>
