@@ -16,3 +16,18 @@ mymap.on('click',ev=>{
     $("#latt").value = ev.latlng.lat;
 })
 mymap.locate({setView:true});
+
+console.log('hi');
+
+$("form.contact-form").addEventListener('submit',submit,false);
+
+
+function submit(e){
+    e.preventDefault();
+    let form = $("form.contact-form");
+    let f = new FormData(form);
+    let object = {};
+    f.forEach((value, key) => {object[key] = value});
+    let json = JSON.stringify(object);
+    console.log(json);
+}
