@@ -1,62 +1,111 @@
 {
-	"energy_generated_per_month_for_next_year": {
-	"1": 108.5,
-	"2": 208.5,
-	"3": 308.5,
-	"4": 408.5,
-	"5": 508.5,
-	"6": 608.5,
-	"7": 708.5,
-	"8": 808.5,
-	"9": 908.5,
-	"10": 308.5,
-	"11": 108.5,
-	"12": 208.5
+	"API-version": "v0.1 alpha",
+	"solar": {
+		"monthIrradiance": {
+			"1": 77.237242320819092,
+			"2": 76.058047781569954,
+			"3": 105.2905802047782,
+			"4": 134.26329010238911,
+			"5": 184.91369283276447,
+			"6": 213.83893515358369,
+			"7": 204.47533105802049,
+			"8": 195.52894197952216,
+			"9": 154.40952901023894,
+			"10": 112.6030853242321,
+			"11": 74.511604095563172,
+			"12": 62.272464163822526
+		},
+		"yearlyIrradiance": 1595.4027440273039,
+		"avgMonthlyPowerConsumption": 1103.0,
+		"avgYearlyPowerConsumption": 13236.0,
+		"idealSystemPower": 9.0,
+		"maxPanelsThatFit": 36,
+		"lowSystem": {
+			"PercentageGenerated": 15.0,
+			"CalculatedSystemPower": 1.35,
+			"CalculatedSRequiredPowerDensity": 0.02588,
+			"SystemPossible": true,
+			"SystemType": "low-panels",
+			"SuggestedPanelPower": 0.235,
+			"EstimatedPanelPrice": 150.0,
+			"SuggestedPanelExample": "Talesun - TP660P-235 - 235W",
+			"PanelsNeeded": 6,
+			"TotalPanelCost": 900.0
+		},
+		"midSystem": {
+			"PercentageGenerated": 60.0,
+			"CalculatedSystemPower": 5.4,
+			"CalculatedSRequiredPowerDensity": 0.1035,
+			"SystemPossible": true,
+			"SystemType": "low-panels",
+			"SuggestedPanelPower": 0.235,
+			"EstimatedPanelPrice": 150.0,
+			"SuggestedPanelExample": "Talesun - TP660P-235 - 235W",
+			"PanelsNeeded": 23,
+			"TotalPanelCost": 3450.0
+		},
+		"highSystem": {
+			"PercentageGenerated": 100.0,
+			"CalculatedSystemPower": 9.0,
+			"CalculatedSRequiredPowerDensity": 0.1725,
+			"SystemPossible": true,
+			"SystemType": "mid-panels",
+			"SuggestedPanelPower": 0.3,
+			"EstimatedPanelPrice": 210.0,
+			"SuggestedPanelExample": "SILFAB SOLAR SLA300M",
+			"PanelsNeeded": 30,
+			"TotalPanelCost": 6300.0
+		},
+		"angleData": {
+			"1": {
+				"cos": 0.35,
+				"angleDegrees": 69.512684885277338
+			},
+			"2": {
+				"cos": 0.42,
+				"angleDegrees": 65.165412510298424
+			},
+			"3": {
+				"cos": 0.5,
+				"angleDegrees": 60.000000000000007
+			},
+			"4": {
+				"cos": 0.56,
+				"angleDegrees": 55.944202257432089
+			},
+			"5": {
+				"cos": 0.59,
+				"angleDegrees": 53.842991799001162
+			},
+			"6": {
+				"cos": 0.62,
+				"angleDegrees": 51.683865526334259
+			},
+			"7": {
+				"cos": 0.61,
+				"angleDegrees": 52.410497035143145
+			},
+			"8": {
+				"cos": 0.6,
+				"angleDegrees": 53.13010235415598
+			},
+			"9": {
+				"cos": 0.55,
+				"angleDegrees": 56.632987030768248
+			},
+			"10": {
+				"cos": 0.42,
+				"angleDegrees": 65.165412510298424
+			},
+			"11": {
+				"cos": 0.39,
+				"angleDegrees": 67.045500598607191
+			},
+			"12": {
+				"cos": 0.32,
+				"angleDegrees": 71.337075115057516
+			}
+		}
 	},
-	"price_equivelent_of_energy_generated_each_month": {
-	"1": 1008.5,
-	"2": 2038.5,
-	"3": 3048.5,
-	"4": 4068.5,
-	"5": 5048,
-	"6": 6038.5,
-	"7": 7038.5,
-	"8": 80868.5,
-	"9": 9018.5,
-	"10": 3068.5,
-	"11": 1058.5,
-	"12": 2083.5
-	},
-	"best_incline_of_panel_for_months": {
-	"1": 10.5,
-	"2": 20.5,
-	"3": 38.5,
-	"4": 48.5,
-	"5": 8,
-	"6": 68.5,
-	"7": 7.5,
-	"8": 88.5,
-	"9": 9.5,
-	"10": 8.5,
-	"11": 18.5,
-	"12": 83.5
-	},
-	"avarage_daily_peak_hours_per_month": {
-		"1": 10.5,
-		"2": 20.5,
-		"3": 38.5,
-		"4": 48.5,
-		"5": 8,
-		"6": 68.5,
-		"7": 7.5,
-		"8": 88.5,
-		"9": 9.5,
-		"10": 8.5,
-		"11": 18.5,
-		"12": 83.5
-	},
-	"outpay_invest_in_x_months": 14,
-	"est_cost_of_initial_investment": 1345,
-	"hardware_to_use": "solar",
-	"message_to_display" : "For you, we chose a middle sized system... It fits your purpose best!"
+	"reccomendedSystem": "solar"
 }
