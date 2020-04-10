@@ -41,6 +41,20 @@
 	"11": 18.5,
 	"12": 83.5
 	},
+	"avarage_daily_peak_hours_per_month": {
+		"1": 10.5,
+		"2": 20.5,
+		"3": 38.5,
+		"4": 48.5,
+		"5": 8,
+		"6": 68.5,
+		"7": 7.5,
+		"8": 88.5,
+		"9": 9.5,
+		"10": 8.5,
+		"11": 18.5,
+		"12": 83.5
+	},
 	"outpay_invest_in_x_months": 14,
 	"est_cost_of_initial_investment": 1345,
 	"hardware_to_use": "solar",

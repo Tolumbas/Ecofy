@@ -21,6 +21,7 @@ console.log('hi');
 
 $("form.contact-form").addEventListener('submit',submit,false);
 
+// onload = submit;
 
 async function submit(e){
     e.preventDefault();
@@ -33,12 +34,14 @@ async function submit(e){
     /* Send json to back-end */
     let data = await fetch("anton_data.json").then(file=>file.json());
     
-    let page3source = await fetch("contact.html").then(html=>html.text());
+    let page3source = await fetch("results.html").then(html=>html.text());
     var parser = new DOMParser();
     var page3 = parser.parseFromString(page3source, 'text/html');
     
     document.body.innerHTML = page3.body.innerHTML;
-    await new Promise(res=>setTimeout(res,3000));
+
+    await new Promise(res=>setTimeout(res,5000));
+    
     document.body.removeChild($('#preloader'));
 
     console.log(data);
