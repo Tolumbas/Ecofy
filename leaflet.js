@@ -22,7 +22,7 @@ console.log('hi');
 $("form.contact-form").addEventListener('submit',submit,false);
 
 
-function submit(e){
+async function submit(e){
     e.preventDefault();
     let form = $("form.contact-form");
     let f = new FormData(form);
@@ -30,4 +30,16 @@ function submit(e){
     f.forEach((value, key) => {object[key] = value});
     let json = JSON.stringify(object);
     console.log(json);
+    /* Send json to back-end */
+    let data = await fetch("anton_data.json").then(file=>file.json());
+    
+    let page3source = await fetch("contact.html").then(html=>html.text());
+    var parser = new DOMParser();
+    var page3 = parser.parseFromString(page3source, 'text/html');
+    
+    document.body.innerHTML = page3.body.innerHTML;
+    await new Promise(res=>setTimeout(res,3000));
+    document.body.removeChild($('#preloader'));
+
+    console.log(data);
 }

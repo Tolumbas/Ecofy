@@ -1,0 +1,48 @@
+{
+	"energy_generated_per_month_for_next_year": {
+	"1": 108.5,
+	"2": 208.5,
+	"3": 308.5,
+	"4": 408.5,
+	"5": 508.5,
+	"6": 608.5,
+	"7": 708.5,
+	"8": 808.5,
+	"9": 908.5,
+	"10": 308.5,
+	"11": 108.5,
+	"12": 208.5
+	},
+	"price_equivelent_of_energy_generated_each_month": {
+	"1": 1008.5,
+	"2": 2038.5,
+	"3": 3048.5,
+	"4": 4068.5,
+	"5": 5048,
+	"6": 6038.5,
+	"7": 7038.5,
+	"8": 80868.5,
+	"9": 9018.5,
+	"10": 3068.5,
+	"11": 1058.5,
+	"12": 2083.5
+	},
+	"best_incline_of_panel_for_months": {
+	"1": 10.5,
+	"2": 20.5,
+	"3": 38.5,
+	"4": 48.5,
+	"5": 8,
+	"6": 68.5,
+	"7": 7.5,
+	"8": 88.5,
+	"9": 9.5,
+	"10": 8.5,
+	"11": 18.5,
+	"12": 83.5
+	},
+	"outpay_invest_in_x_months": 14,
+	"est_cost_of_initial_investment": 1345,
+	"hardware_to_use": "solar",
+	"message_to_display" : "For you, we chose a middle sized system... It fits your purpose best!"
+}

@@ -205,25 +205,3 @@ Author:         Company Name
             maxGlare: .5,
         });
     })(jQuery);
-    /*------------------ Google-Map --------------------*/
-    var iconmap = document.querySelectorAll('#map');
-    var img_src = $("#map").attr('data-icon');
-    var google;
-    for (var i in iconmap)
-        if (iconmap.hasOwnProperty(i)) {
-            function initMap() {
-                var map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 10,
-                    center: {
-                        lat: 40.7819502,
-                        lng: -74.7357194
-                    }
-                });
-                var map_icon = img_src;
-                var marker = new google.maps.Marker({
-                    position: map.getCenter(),
-                    icon: map_icon,
-                    map: map
-                });
-            }
-        }
