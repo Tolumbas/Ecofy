@@ -29,6 +29,9 @@ async function submit(e){
     let f = new FormData(form);
     let jsonForm = {};
     f.forEach((value, key) => {jsonForm[key] = value});
+    if (jsonForm.lat == ""){
+        jsonForm = {"long":"23.318670272565218","lat":"42.68131953838309","invest_range":"medium","monthly_bill":"123","price_per_kwh":"32"};
+    }
     let jsonForSend = JSON.stringify(jsonForm);
     console.log(jsonForSend);
     /* Send json to back-end */
@@ -74,8 +77,21 @@ async function submit(e){
                         beginAtZero: true
                     }
                 }]
+            },
+            onClick:function(e){
+                let target = myChart.getElementAtEvent(e);
+                if (target.length){
+                    let month = target[0]['_index']+1;
+                    changeMonth(month);
+                }
             }
         }
     });
-    
+    changeMonth(1);
+    function changeMonth(index){
+        let power = Math.round(data.solar.monthIrradiance[index]*data.solar[system].CalculatedSystemPower);
+        $("#monthPower").innerHTML = power;
+        $("#monthSaves").innerHTML = power * jsonForm.price_per_kwh;
+        $("#monthAngle").innerHTML = data.solar.angleData[index].angleDegrees;
+    }    
 }
