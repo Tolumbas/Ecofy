@@ -40,7 +40,7 @@ async function submit(e){
     
     document.body.innerHTML = page3.body.innerHTML;
 
-    await new Promise(res=>setTimeout(res,5000));
+    await new Promise(res=>setTimeout(res,1000));
     
     document.body.removeChild($('#preloader'));
 
