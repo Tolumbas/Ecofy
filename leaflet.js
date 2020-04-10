@@ -1,3 +1,4 @@
+var $ = s=>document.querySelector(s);
 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -11,7 +12,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(mymap);
 
 mymap.on('click',ev=>{
-    console.log(ev.latlng);
+    $("#long").value = ev.latlng.lng;
+    $("#latt").value = ev.latlng.lat;
 })
-
-map.locate({setView: true, maxZoom: 16});
+mymap.locate({setView:true});
