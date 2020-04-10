@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Vutix </title>
+
+    <link rel="stylesheet" href="assets/css/documenter_style.css">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.scrollTo.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</head>
+
+<body>
+    <div id="documenter_sidebar">
+        <ul id="documenter_nav">
+            <li class="active"><a href="#documenter_cover">Introduction</a></li>
+			<li><a href="#installation ">  Installation  </a></li>
+            <li><a href="#get_start">Getting Started</a></li>
+            <li><a href="#pages">Pages</a></li>
+            <li><a href="#html_structure" title="HTML Structure">HTML Structure</a></li>
+            <li><a href="#css_files_and_structure" title="CSS Files and Structure">CSS Structure</a></li>
+            <li><a href="#javascript" title="JavaScript">JavaScript Structure</a></li>
+            <li><a href="#files-link" title="files-link"> Files Link </a></li>
+			<li><a href="#docs-headers-types" title="JavaScript">  Headers Types</a></li>
+            <li><a href="#color-schemes" title="JavaScript">Color Schemes </a></li>
+            <li><a href="#creadits" title="JavaScript">Credits</a></li>
+            <li><a href="#help_support" title="Thanks">Thanks</a></li>
+
+        </ul>
+        <div id="documenter_copyright">Copyright <a href="#" target="_blank">Weblizar</a>
+        </div>
+    </div>
+
+    <div id="documenter_content">
+
+        <section id="documenter_cover">
+            <h1>  Vutix - Multipurpose HTML5 Template</h1>
+            <div class="doc-panel">
+                <ul>
+                    <li>Created: 20-07-2019 </li>
+                    <li>By: Weblizar</li>
+                </ul>
+                <p style="margin-left:0">Thank you for purchasing my template. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="https://themeforest.net/user/weblizar">here</a>. Thank you so much!!</p>
+                <h4>NOTE: All images used here are just for preview purpose only &amp; they are not included in main file.</h4>
+            </div>
+        </section>
+		
+		<section id="installation">
+            <div class="doc-panel">
+                <h3 class="title-section">Installation </h3>
+				
+				<p>Follow the steps below to get started with your Site Template:<br>
+
+				Open the Package/HTML Folder to find all the Templates Files
+				You will need to Upload these files to your Web Server using FTP in order to use it on your Website.
+				Make sure you upload the required files/folders listed below:
+				<ol>
+				<li> HTML/css - Extra Stylesheets Folder </li>
+				<li> HTML/img - img Folder </li>
+				<li> HTML/js - Javacripts Folder </li>
+				<li> HTML/index.html - Index File/Homepage	</li>
+                </ol>
+				The other files can be used according to your preferences.
+				You're now good to go..! Start adding your Content and show off your Brand New Beautiful Website in style.
+			</div>
+		</section>
+
+        <section id="get_start">
+
+            <div class="doc-panel">
+                <h3 class="title-section"> Getting Started </h3>
+                <div class="single_part">
+                    <h4>How to change header logo</h4>
+                    <hr>
+                    <p>First open main file in web code editor. (Such as Notepad++, Brackets, Sublime Text etc.)
+                        <br> Then open index.html file and edit this link. For example we provide an image.</p>
+	<pre>
+	&lt;a class="navbar-brand" href="index.html "&gt;
+		&lt;img src="img/all-img/logo.png" alt="logo_img" class="img-fluid"&gt;
+	&lt;/a&gt;
+	</pre>
+                </div>
+                <div class="single_part">
+                    <h4>How to change menu title</h4>
+                    <hr>
+                    <p>Find this section in index.html file. Then edit menu title...
+                        <br>For example we provide an image.</p>
+                    <img src="assets/images/site-menu.png" alt="site-menu" class="img-responsive">
+                </div>
+                <div class="single_part">
+                    <h4>How to change footer copywrite text</h4>
+                    <hr>
+                    <p>Find this section in index.html file. Then edit footer text...
+                        <br> For example we provide an image.</p>
+                    <img src="assets/images/site-footer.jpg" alt="site-footer" class="img-responsive">
+                </div>
+                <div class="single_part">
+                    <h4>How to change Main image</h4>
+                    <hr>
+                    <p>Find this section in index.html file. Then edit slider images and heading text...
+                        <br>For example we provide an image.</p>
+                    <img src="assets/images/site-slider.png" alt="site-slider" class="img-responsive">
+                    <div class="padding" style="padding-top: 15px;"></div>
+                </div>
+            </div>
+        </section>
+				
+		<section id="pages">
+            <div class="doc-panel">
+                <h3 class="title-section">Home Page  section </h3>
+					<ol>
+                        <li> Header Section </li>
+						<li> Home  Main Section</li>
+						<li> About Section </li>
+						<li> Portfolio  Section </li>
+						<li> Partner  Section</li>
+						<li> Testimonials section </li>
+						<li> Blog  Section </li>
+						<li>Footer  Section</li>
+					</ol>
+				
+            </div>
+        </section>
+
+		
+        <section id="html_structure">
+            <div class="doc-panel">
+                <h3 class="title-section">Getting HTML Structure</h3>
+
+                <h4>Introduction</h4>
+               
+			   
+			   
+			   <pre class="bottommargin">&lt;!DOCTYPE html&gt;
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+
+	<span class="color">&lt;!-- Your Stylesheets, Scripts &amp; Title --&gt;</span>
+	...
+
+&lt;/head&gt;
+	&lt;body&gt;
+
+
+		<span class="color">&lt;!-- Header --&gt;</span>
+		
+		&lt;header"&gt;
+
+			...
+
+		&lt;/header&gt;
+		
+		&lt;main&gt;
+		
+			<span class="color">&lt;!-- Section to Section --&gt;</span>
+		
+			&lt;section&gt;
+
+				&lt;div&gt;
+
+					...
+
+				&lt;/div&gt;
+
+			&lt;/section&gt;
+			
+		&lt;/main&gt;
+		
+		<span class="color">&lt;!-- Footer--&gt;</span>
+		
+		&lt;footer"&gt;
+
+			&lt;div&gt;
+
+				...
+
+			&lt;/div&gt;
+		&lt;/footer&gt;
+
+	&lt;/body&gt;
+&lt;/html&gt;</pre>
+			   
+            </div>
+        </section>
+
+        <section id="css_files_and_structure">
+            <div class="doc-panel">
+                <h3 class="title-section">Getting  CSS</h3>
+                <h4>Css files</h4>
+                <p>There are 2 main CSS files in this template.</p>
+                <ul>
+                    <li>style.css - template common styles</li>
+                    <li>responsive.css - Responsive design for all device</li>
+                    <li>slick.css - For  slider</li>
+                    <li>bootstrap-v4.3.0.min.css</li>
+                    <li>flaticon.css</li>
+                </ul>
+                <p>Note:</p>
+                <ul>
+                    <li>Make sure the responsive.css is below other css files</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="javascript">
+            <div class="doc-panel">
+                <h3 class="title-section">Getting JavaScript</h3>
+                <p>This template imports many Javascript files. All located in the "<span class="file">js</span>" folder.</p>
+                <ol>
+                    <li>jquery.1.12.4.js</li>
+                    <li>bootstrap.min.js</li>
+                    <li>slick.min.js</li>
+                    <li>custom.js</li>
+                </ol>
+                <p>Note:</p>
+                <ol>
+                    <li>
+                        Make the custom-script.js at last (below other js files).
+                    </li>
+                </ol>
+            </div>
+        </section>
+		<section id="files-link">
+		 <div class="doc-panel">
+		  <h3 class="title-section">Files Link </h3>
+		 <h4>  How to change header files css /js </h4>
+
+			
+<pre>
+&lt;head&gt;
+	&lt;!--css--&gt;
+	&lt;link rel="stylesheet" href="css/style.css"&gt;
+	&lt;link rel="stylesheet" href="css/responsive.css"&gt;
+	&lt;link rel="stylesheet" href="css/bootstrap.min.css"&gt;
+	
+	&lt;!--JS--&gt;
+	&lt;script src="js/jquery.1.12.4.js"&gt; &lt;/script&gt;
+	&lt;script src="js/bootstrap-v4.1.3.min.js"&gt; &lt;/script&gt;
+	&lt;script src="js/slick.js"&gt; &lt;/script&gt;
+
+	&lt;!-- Document Title--&gt;
+	&lt;title&gt;Page | Vutix &lt;/title&gt;
+
+&lt;/head&gt;
+
+</pre>
+
+			</div>
+	</section>
+		 
+		 <section >
+		 <div class="doc-panel">
+			<div id="docs-headers-types" class="docs-content-inner page-section">
+				<h3 class="title-section">Header Of Types</h3>
+					<ol>
+						<li> Left Side logo  Right side  Contact & Search Form </li>
+						
+					</ol>
+					
+			</div>
+		</div>
+		</section>
+		<section id="color-schemes">
+            <div class="doc-panel">
+                <h3 class="title-section"> Color Schemes</h3>
+
+						<p>You can change your Website's Color Scheme in an instant. You simply need to change the HEX Color Code in the <code>css/home1.css , css/home2.css ,css/home3.css</code> file &amp; you are good to go. Follow these quick steps to get going:</p>
+
+
+<pre>
+	...
+
+	:root {
+		--main-color: #402bb2;
+	}
+	...
+</pre>
+
+			<p>Now simply change the HEX Codes according to your requirements.</p>
+
+					</div>
+		
+		</section>
+		
+		
+		
+        <section id="creadits">
+            <div class="doc-panel">
+                <h3 class="title-section">Getting Credits</h3>
+                <h4>Fonts:</h4>
+                <ol>
+                    <li> Poppins </li>
+                </ol>
+
+                <h4>Images Used:</h4>
+                <ol>
+                    <li><a href="http://pngimg.com" target="blank">PngImg</a></li>
+                    <li><a href="https://unsplash.com/" target="blank">Unsplash</a></li>
+                    <li><a href="https://pixabay.com/" target="blank">Pixabay</a></li>
+                </ol>
+
+                <h4>Icon Used:</h4>
+                <ol>
+                    <li><a href="https://www.flaticon.com/search?word=resort" target="blank"> Flaticon </a></li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="help_support">
+            <div class="doc-panel">
+                <div>
+                    <p>Thanks for Visiting us and purchasing our item!!! Once again thank you for purchasing one of our template.</p>
+                    <h5>Best Regards - Weblizar</h5>
+                </div>
+            </div>
+        </section>
+    </div>
+	<a href="javascript:" id="return-to-top" style="display: inline;"> <img src="assets/images/r-top.png" alt="top-img"> </a>
+
+	<script>
+			
+	$(window).on("scroll", function() {
+			if ($(this).scrollTop() >= 50) {
+				$('#return-to-top').fadeIn(200);
+			} else {
+				$('#return-to-top').fadeOut(200);
+			}
+		});
+		$('#return-to-top').click(function() {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+		});
+	</script>
+	
+</body>
+
+</html>
