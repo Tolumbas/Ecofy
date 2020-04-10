@@ -52,15 +52,21 @@
                 <div class="col-sm-12 col-md-6" id="barplot">
                     <canvas width=100% height=100%></canvas>
                 </div>
-                
+                <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    More info for each month
+                </div> </div>
+                <div class="col-sm-12 col-md-6">
+                    <h3>Your choise: SOLAR!</h3>
+                </div>
             </div>
-             <div class="row">
-                <div class="col-lg-6">
+                 <div class="row">
+                <div class="col-lg-3">
                     <div class="img-wapper">
                         <img src="images/4.jpg" alt="about-two">
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-3">
                     <div class="main-title">
                         <h2 class="title mb-3">Our Gallery</h2>
                         <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -78,6 +84,10 @@
                     </div>
                 </div>
             </div>
+                <div class="col-sm-12 col-md-6">
+                    Profit after X months!
+                </div>
+    
 
 
 
