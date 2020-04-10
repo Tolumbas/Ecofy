@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vutix</title>
+    <title>Ecofy</title>
     <link rel="icon" href="images/fav.png" type="image/gif">
      <!-- bootstrap.min.css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -50,10 +50,10 @@
                             <nav>
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                    <li><a href="blog.html">News</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="about.html">About our project</a></li>
+                                    <li><a href="portfolio.html">About us</a></li>
+                                    <li><a href="blog.html">Future work</a></li>
+                                    <li><a href="contact.html">Contact us</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -70,14 +70,15 @@
                     <div class="row align-items-center">
                         <div class="col-lg-5">
                             <div class="hero-img-wapper">
-                                <img src="images/Flying-Bird-P.png" alt="bird" data-tilt>
+                                <img src="images/indexfrontpic.png" alt="bird" data-tilt>
                             </div>
                         </div>
                         <div class="col-lg-7">
                             <div class="hero-slider__content">
-                                <h2 class="hero-slider__title">Fly Bird Magic Tricks</h2>
-                                <p class="hero-slider__text">Simple Design For You Liking</p>
-                                <a class="default-btn" href="about.html"> More</a>
+                                <h2 class="hero-slider__title">Ecofy - a radically better way to power your house</h2>
+                                <p class="hero-slider__text">Help our planet become less poluted!</p>
+                                <a class="default-btn" href="about.html">More</a>
+                                 <a class="default-btn" href="about.html">Demo</a>
                             </div>
                         </div>
                     </div>
@@ -140,10 +141,9 @@
                         <div class="main-title">
                             <h2 class="title">About Us</h2>
                         </div>
-                        <p>Who says airline websites are too complex to be built responsive The Work & Co technology team
-                             a site that works wherever you are, so you have a great wherever experience at any point of
-                            your trip, from a laptop to a mobile sit works   dolore labore.The Work & technology team
-                            built a site that works.</p>
+                        <p>Air pollution has significantly dropped throughout the world due to the coronavirus, but how long will it last? Sooner or later, we will get back to our ordinary lives. The Earth is undeniably better when cleaner, but how would we maintain that? Let’s first start with our homes!
+
+Renewable energy is an emerging trend, but yet, for someone new to the field, there are so many seemingly complicated questions that need to be answered... How much is the setup going to cost me? How effective is it going to be? How much energy will it produce? How long before my investment starts to generate profit? Can I rely on it all-year-round? Where do I start?</p>
                         <a href="contact.html" class="default-btn">Contact</a>
                     </div>
                 </div>

@@ -38,7 +38,7 @@
     <!-- preloader -->
     <div id="preloader"></div>
     <!-- Header-area -->
-    <header class="header-fixed header-wht">
+    <header class="header-fixed header-wht" style="z-index:1200">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-lg-4">
@@ -83,30 +83,28 @@
                     <form class="contact-form">
                         <div class="form-group">
                             <label >Longitude: </label>
-                            <input type="text" class="form-control" id="uname" placeholder="Name" name="Name"
-                                required="">
+                            <input type="text" class="form-control" id="long" name="long"
+                                required>
                         </div>
                         <div class="form-group">
                             <label >Latitude: </label>
-                            <input type="password" class="form-control" id="pwd" placeholder="Email" name="Email"
+                            <input type="text" class="form-control" id="latt" name="lat"
                                 required="">
                         </div>
-                        <form>
-  										<input type="radio" id="low" name="budget" value="low">
-  											<label for="low">Low</label><br>
-  										<input type="radio" id="medium" name="budget" value="medium">
-  											<label for="medium">Medium</label><br>
-										<input type="radio" id="high" name="budget" value="high">
-  											<label for="high">High</label><br>
-								</form> 
+                        <input type="radio" id="low" name="invest_range" value="low">
+                            <label for="low">Low</label><br>
+                        <input type="radio" id="medium" name="invest_range" value="medium">
+                            <label for="medium">Medium</label><br>
+                        <input type="radio" id="high" name="invest_range" value="high">
+                            <label for="high">High</label><br>
                         <div class="form-group">
                             <label >Money paid for electricity last month: (in USD) *</label>
-                            <input type="money" class="form-control" id="pwd1" placeholder="Subject" name="Subject"
+                            <input type="money" class="form-control" id="monpaid" name="monthly_bill"
                                 required="">
                         </div>
                          <div class="form-group">
                             <label >Price for 1 kWh: *</label>
-                            <input type="money1" class="form-control" id="pwd1" placeholder="Subject" name="Subject"
+                            <input type="money1" class="form-control" id="kwhprice" name="price_per_kwh"
                                 required="">
                         </div>
                         <button type="submit" class="default-btn">Submit</button>
@@ -114,7 +112,7 @@
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                     <!-- OSM -->
-                    <div id="mapid" style="height:100%">
+                    <div id="mapid" style="height:100%;min-height:300px;cursor:crosshair;">
                         
                     </div>                        
                 </div>
@@ -122,44 +120,6 @@
         </div>
     </section>
 </div>
-    <!-- Contact-info -->
-    <section class="ws-section-spacing bg-gray">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="service-box">
-                        <div class="icon-box">
-                            <i class="flaticon-phone-book"></i>
-                        </div>
-                        <h3>(03) 5156 0449</h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="service-box">
-                        <div class="icon-box">
-                            <i class="flaticon-map"></i>
-                        </div>
-                        <h3>14 Schooner Tce,
-                            Paynesville, VIC 3880 </h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="service-box">
-                        <div class="icon-box">
-                            <i class="flaticon-envelope"></i>
-                        </div>
-                        <h3><a href="#">Info@yourhosting.com</a></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End-contact-info -->
-    <!-- Map-info -->
-    <div class="map" id="map" title="name" data-icon="images/map.png">
-
-    </div>
-    <!-- End-map-info -->
     <!-- Footer -->
     <footer class="footer-space">
         <div class="container">
@@ -168,7 +128,7 @@
                     <div class="footer-logo">
                         <a href="index.html"> <img src="images/logo-wht.png" alt="footer-logo"></a>
                     </div>
-                </div>
+                </div> <!--
                 <div class="col-lg-6">
                     <div class="foo-nav">
                         <ul>
@@ -188,7 +148,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </footer>
     <!-- End-Footer -->

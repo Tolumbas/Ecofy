@@ -70,14 +70,15 @@
                     <div class="row align-items-center">
                         <div class="col-lg-5">
                             <div class="hero-img-wapper">
-                                <img src="images/Flying-Bird-P.png" alt="bird" data-tilt>
+                                <img src="images/indexfrontpic.png" alt="bird" data-tilt>
                             </div>
                         </div>
                         <div class="col-lg-7">
                             <div class="hero-slider__content">
-                                <h2 class="hero-slider__title">Fly Bird Magic Tricks</h2>
-                                <p class="hero-slider__text">Simple Design For You Liking</p>
-                                <a class="default-btn" href="about.html"> More</a>
+                                <h2 class="hero-slider__title">Ecofy - a radically better way to power your house</h2>
+                                <p class="hero-slider__text">Help our planet become less poluted!</p>
+                                <a class="default-btn" href="about.html">More</a>
+                                 <a class="default-btn" href="about.html">Demo</a>
                             </div>
                         </div>
                     </div>
@@ -138,12 +139,10 @@
                 <div class="col-lg-6">
                     <div class="diss-content">
                         <div class="main-title">
-                            <h2 class="title">About Us</h2>
+                            <h2 class="title">Our project</h2>
                         </div>
-                        <p>Who says airline websites are too complex to be built responsive The Work & Co technology team
-                             a site that works wherever you are, so you have a great wherever experience at any point of
-                            your trip, from a laptop to a mobile sit works   dolore labore.The Work & technology team
-                            built a site that works.</p>
+                        <p>Renewable energy is an emerging trend, but yet, for someone new to the field, there are so many seemingly complicated questions that need to be answered... How much is the setup going to cost me? How much energy will it produce? How long before my investment starts to generate profit? Can I rely on it all-year-round?</p>
+                        <p>Ecofy provides an all-in-one solution for answering those concerns and making the leap into renewable energy as smooth as possible.</p>
                         <a href="contact.html" class="default-btn">Contact</a>
                     </div>
                 </div>
