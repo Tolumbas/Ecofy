@@ -70,15 +70,14 @@
                     <div class="row align-items-center">
                         <div class="col-lg-5">
                             <div class="hero-img-wapper">
-                                <img src="images/indexfrontpic.png" alt="bird" data-tilt>
+                                <img src="images/Flying-Bird-P.png" alt="bird" data-tilt>
                             </div>
                         </div>
                         <div class="col-lg-7">
                             <div class="hero-slider__content">
-                                <h2 class="hero-slider__title">Ecofy - a radically better way to power your house</h2>
-                                <p class="hero-slider__text">Help our planet become less poluted!</p>
-                                <a class="default-btn" href="about.html">More</a>
-                                 <a class="default-btn" href="about.html">Demo</a>
+                                <h2 class="hero-slider__title">Fly Bird Magic Tricks</h2>
+                                <p class="hero-slider__text">Simple Design For You Liking</p>
+                                <a class="default-btn" href="about.html"> More</a>
                             </div>
                         </div>
                     </div>
