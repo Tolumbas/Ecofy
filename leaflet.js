@@ -21,16 +21,16 @@ console.log('hi');
 
 $("form.contact-form").addEventListener('submit',submit,false);
 
-onload = submit;
+// onload = submit;
 
 async function submit(e){
     e.preventDefault();
     let form = $("form.contact-form");
     let f = new FormData(form);
-    let object = {};
-    f.forEach((value, key) => {object[key] = value});
-    let json = JSON.stringify(object);
-    console.log(json);
+    let jsonForm = {};
+    f.forEach((value, key) => {jsonForm[key] = value});
+    let jsonForSend = JSON.stringify(jsonForm);
+    console.log(jsonForSend);
     /* Send json to back-end */
     let data = await fetch("anton_data.json").then(file=>file.json());
     
@@ -44,5 +44,38 @@ async function submit(e){
     
     document.body.removeChild($('#preloader'));
 
+    let system = {
+        "low":"lowSystem",
+        "medium":"midSystem",
+        "high":"highSystem"
+    }[jsonForm.invest_range];
+    // debugger;
+    let barData = [];
+    for (var a=1;a<=12;a++){
+        barData.push(Math.round(data.solar.monthIrradiance[a]*data.solar[system].CalculatedSystemPower));
+    }
+    // let barData = data.solar.monthIrradiance.map(p=>p * data[system].CalculatedSystemPower)
+
+    var ctx = document.getElementById('barplotcanvas').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'kW/h Generated',
+                data: barData,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
     
 }
