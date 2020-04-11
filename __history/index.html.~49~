@@ -117,7 +117,7 @@
     </section>
     <!-- End-About-Section -->
     <!-- Portfolio-section -->
-    <section class="ws-section-spacing bg-gray" id="ourteam">
+  <section class="ws-section-spacing bg-gray" id="ourteam">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -129,27 +129,27 @@
             <div class="row masonry-item">
                 <div class="col-lg-4 col-md-6 col-sm-12 masonry">
                     <div class="gallery-box">
-                        <img src="images/team/andrey.jpg" alt="gallery-1">
+                        <img src="images/Image-1.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                             <a class="default-btn">Andrey Gizdov</a>
                         </div>
                     </div>
                 </div>
                 <!-- item -->
                 <div class="col-lg-4 col-md-6 col-sm-12 masonry">
                     <div class="gallery-box">
-                        <img src="images/team/antoan.jpg" alt="gallery-1">
+                        <img src="images/Image-3.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Sona Yavrumyan</a>
                         </div>
                     </div>
                 </div>
                 <!-- item -->
                 <div class="col-lg-4 col-md-6 col-sm-12 masonry">
                     <div class="gallery-box">
-                        <img src="images/team/anton.jpg" alt="gallery-1">
+                        <img src="images/Image-5.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Antoan Georgiev</a>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                     <div class="gallery-box">
                         <img src="images/georgi.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Georgi Hristov</a>
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                     <div class="gallery-box">
                         <img src="images/dominykas.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Dominykas Samulioni</a>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                     <div class="gallery-box">
                         <img src="images/marek.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Marek Pinto</a>
                         </div>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
                     <div class="gallery-box">
                         <img src="images/Image-4.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Anton Stoyanov</a>
                         </div>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                     <div class="gallery-box">
                         <img src="images/Image-6.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Eimantas Mazeika</a>
                         </div>
                     </div>
                 </div>
