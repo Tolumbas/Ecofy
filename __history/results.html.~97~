@@ -15,7 +15,7 @@
             <div class="row justify-content-end">
                 <div class="col-lg-4">
                     <div class="logo-img-wapper">
-                        <a href="index.html"> <img src="images/Logo.png" alt="logo"></a>
+                        <a href="index.html"> <img src="images/Logo.png" alt="logo"></a>                     
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -42,12 +42,14 @@
             </div>
         </div>
     </header>
-
     <section class="ws-section-spacing contact-page">
+    <div class="container">	 <h2 align="center">YOUR CHOICE:</h2>
+     <p>Based on your coordinates, your budget and your monthly bills, our system has determined that
+                        your most viable option for economical power is <b>solar/wind power. </p>
+                        </div>
         <div class="container">     <div class="row">   
                     <div class="col-sm-12 col-md-6 align-self-center" id="barplot">
-                        <canvas width=100% height=100% id="barplotcanvas"></canvas>                     						
-    
+                        <canvas width=100% height=100% id="barplotcanvas"></canvas>                     						 
                         <table class="table table-bordered">
                             <tr>
                                 <td>Energy Generated that month:</td>
@@ -61,14 +63,11 @@
                                 <td>Peak sun angle this month:</td>
                                 <td><span id="monthAngle"></span>°</td>
                             </tr>
-                        </table>
+                        </table>                                         
                     </div>
                      <div class="col-sm-12 col-md-6">     
                             <div class="main-title">
-                                <h2 class="title mb-3">YOUR CHOICE: </h2>
-                                <h3>Based on your coordinates, your budget and your monthly bills, our system has determined that
-                        your most viable option for economical power is <b>solar/wind power.</b>
-                        </h3>
+                                <h2 class="title mb-3">YOUR CHOICE: </h2>                             
                                 <h3>The system will outpay itself in <b>X months.</b></h3>
                             </div>
                         </div>
