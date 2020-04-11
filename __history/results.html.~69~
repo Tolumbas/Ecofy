@@ -9,15 +9,12 @@
         </div>
     </div>
     <!-- Header-area -->
-    <header class="header-fixed header-wht">
+    <header class="header-fixed">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-lg-4">
                     <div class="logo-img-wapper">
-                        <a href="index.html">
-                            <img src="images/Logo.png" alt="logo" class="hiden-logo">
-                            <img src="images/logo-wht.png" alt="logo" class="show-logo">
-                        </a>
+                        <a href="index.html"> <img src="images/Logo.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -33,10 +30,9 @@
                             <nav>
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                    <li><a href="blog.html">News</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="#aboutus">What do we do</a></li>
+                                    <li><a href="#ourteam">Who are we</a></li>
+                                    <li><a href="#contactus">Contact us</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -45,48 +41,38 @@
             </div>
         </div>
     </header>
-    
+
     <section class="ws-section-spacing contact-page">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6" id="barplot">
-                    <canvas width=100% height=100% id="barplotcanvas"></canvas>
-                </div>              
-            </div>
-             <div class="row">
-                <div class="col-lg-6">
-                    <div class="img-wapper">
-                        <img src="images/4.jpg" alt="about-two">
+        <div class="container">           
+                    <div class="col-sm-12 col-md-6 align-self-center" id="barplot">
+                        <canvas width=100% height=100% id="barplotcanvas"></canvas>                   
+   						 </div>
+                    <div class="col-sm-12 col-md-6">
+                        <table class="table table-bordered">
+                            <tr>
+                                <td>Energy Generated that month:</td>
+                                <td><span id="monthPower"></span>kW/h</td>
+                            </tr>
+                            <tr>
+                                <td>Total monthly saves:</td>
+                                <td><span id="monthSaves"></span>$</td>
+                            </tr>
+                            <tr>
+                                <td>Peak sun angle this month:</td>
+                                <td><span id="monthAngle"></span>°</td>
+                            </tr>
+                        </table>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="main-title">
-                        <h2 class="title mb-3">Our Gallery</h2>
-                        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s,
+                     <div class="col-sm-12 col-md-6">     
+                            <div class="main-title">
+                                <h2 class="title mb-3">YOUR CHOICE: </h2>
+                                <h3>Based on your coordinates, your budget and your monthly bills, our system has determined that
+                        your most viable option for economical power is <b>solar/wind power.</b>
                         </h3>
-                    </div>
-                    <div class="diss-two">
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                            here', making it look like readable English. Many desktop publishing packages and web page
-                            editors now use Lorem Ipsum as their default model text, and a search for 
-                            uncover many web sites.  </p>
-                        <a href="portfolio-single.html" class="default-btn">More</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-            </div>
-
-
-
-
-        
-        </div>
+                                <h3>The system will outpay itself in <b>X months.</b></h3>
+                            </div>
+                        </div>
+                    </div>       
     </section>
     <!-- Contact-info -->
 
