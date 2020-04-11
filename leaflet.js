@@ -42,7 +42,7 @@ async function submit(e){
     
     document.body.innerHTML = page3.body.innerHTML;
     
-    let data = await fetch(`https://ecofy-api.azurewebsites.net/api/predict?lat=${jsonForm.lat}&lon=${jsonForm.long}&kwhPrice=${jsonForm.price_per_kwh}&avg_monthlyBill=${jsonForm.monthly_bill}&availArea=60`)
+    let data = await fetch(`https://ecofy-api.azurewebsites.net/api/predict?lat=${jsonForm.lat}&lon=${jsonForm.long}&kwhPrice=${jsonForm.price_per_kwh}&avg_monthlyBill=${jsonForm.monthly_bill}&availArea=${jsonForm.roof_area}`)
         .then(file=>file.json())
         // .catch(e=>alert(`Server Error:${e}`));
     // await new Promise(res=>setTimeout(res,1000));
