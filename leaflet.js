@@ -125,6 +125,8 @@ async function submit(e){
         }
     });
 
+    $("#choiceEnergy").innerHTML = data.reccomendedSystem;
+
     changeMonth(1,"Solar");
     changeMonth(1,"Wind");
 
