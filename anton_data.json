@@ -1,109 +1,132 @@
 {
-	"API-version": "v0.1 alpha",
-	"solar": {
-		"monthIrradiance": {
-			"1": 77.237242320819092,
-			"2": 76.058047781569954,
-			"3": 105.2905802047782,
-			"4": 134.26329010238911,
-			"5": 184.91369283276447,
-			"6": 213.83893515358369,
-			"7": 204.47533105802049,
-			"8": 195.52894197952216,
-			"9": 154.40952901023894,
-			"10": 112.6030853242321,
-			"11": 74.511604095563172,
-			"12": 62.272464163822526
+	"API-version": "v0.2 alpha",
+	"energyTypes": {
+		"solar": {
+			"monthIrradiance": {
+				"1": 45.91,
+				"2": 68.8,
+				"3": 103.73,
+				"4": 133.62,
+				"5": 149.16,
+				"6": 167.58,
+				"7": 186.71,
+				"8": 180.85,
+				"9": 126.86,
+				"10": 93.04,
+				"11": 49.04,
+				"12": 43.72
+			},
+			"yearlyIrradiance": 1349.02,
+			"avgMonthlyPowerConsumption": 6150,
+			"avgYearlyPowerConsumption": 73800,
+			"idealSystemPower": 55,
+			"maxPanelsThatFit": 36,
+			"lowSystem": {
+				"PercentageGenerated": 15,
+				"CalculatedSystemPower": 8.25,
+				"CalculatedRequiredPowerDensity": 0.15865,
+				"SystemPossible": true,
+				"SystemType": "mid-panels",
+				"SuggestedPanelPower": 0.3,
+				"EstimatedPanelPrice": 210,
+				"SuggestedPanelExample": "SILFAB SOLAR SLA300M",
+				"PanelsNeeded": 28,
+				"TotalPanelCost": 5880,
+				"EstimatedSystemCost": 8380,
+				"ROIMonths": 454.2,
+				"ROIYears": 37.8
+			},
+			"midSystem": {
+				"PercentageGenerated": 60,
+				"CalculatedSystemPower": 33,
+				"CalculatedRequiredPowerDensity": 0.63462,
+				"SystemPossible": false,
+				"Message": "Unfortunatelly this configuration is unavailable, because the roof area you specified is not sufficient! But here is the best configuration, that is available for your available area... ",
+				"SuggestedPanelPower": 0.375,
+				"EstimatedPanelPrice": 310,
+				"SuggestedPanelExample": "LG NeON® R LG360Q1C-V5",
+				"PanelsNeeded": 29,
+				"TotalPanelCost": 8990,
+				"MaxAvailablePower: ": 10.875
+			},
+			"highSystem": {
+				"PercentageGenerated": 100,
+				"CalculatedSystemPower": 55,
+				"CalculatedRequiredPowerDensity": 1.05769,
+				"SystemPossible": false,
+				"Message": "Unfortunatelly this configuration is unavailable, because the roof area you specified is not sufficient! But here is the best configuration, that is available for your available area... ",
+				"SuggestedPanelPower": 0.375,
+				"EstimatedPanelPrice": 310,
+				"SuggestedPanelExample": "LG NeON® R LG360Q1C-V5",
+				"PanelsNeeded": 29,
+				"TotalPanelCost": 8990,
+				"MaxAvailablePower: ": 10.875
+			},
+			"angleData": {
+				"1": {
+					"cos": 0.27,
+					"angleDegrees": 74.34
+				},
+				"2": {
+					"cos": 0.39,
+					"angleDegrees": 67.05
+				},
+				"3": {
+					"cos": 0.45,
+					"angleDegrees": 63.26
+				},
+				"4": {
+					"cos": 0.5,
+					"angleDegrees": 60
+				},
+				"5": {
+					"cos": 0.59,
+					"angleDegrees": 53.84
+				},
+				"6": {
+					"cos": 0.58,
+					"angleDegrees": 54.55
+				},
+				"7": {
+					"cos": 0.61,
+					"angleDegrees": 52.41
+				},
+				"8": {
+					"cos": 0.54,
+					"angleDegrees": 57.32
+				},
+				"9": {
+					"cos": 0.5,
+					"angleDegrees": 60
+				},
+				"10": {
+					"cos": 0.4,
+					"angleDegrees": 66.42
+				},
+				"11": {
+					"cos": 0.3,
+					"angleDegrees": 72.54
+				},
+				"12": {
+					"cos": 0.27,
+					"angleDegrees": 74.34
+				}
+			}
 		},
-		"yearlyIrradiance": 1595.4027440273039,
-		"avgMonthlyPowerConsumption": 1103.0,
-		"avgYearlyPowerConsumption": 13236.0,
-		"idealSystemPower": 9.0,
-		"maxPanelsThatFit": 36,
-		"lowSystem": {
-			"PercentageGenerated": 15.0,
-			"CalculatedSystemPower": 1.35,
-			"CalculatedSRequiredPowerDensity": 0.02588,
-			"SystemPossible": true,
-			"SystemType": "low-panels",
-			"SuggestedPanelPower": 0.235,
-			"EstimatedPanelPrice": 150.0,
-			"SuggestedPanelExample": "Talesun - TP660P-235 - 235W",
-			"PanelsNeeded": 6,
-			"TotalPanelCost": 900.0
-		},
-		"midSystem": {
-			"PercentageGenerated": 60.0,
-			"CalculatedSystemPower": 5.4,
-			"CalculatedSRequiredPowerDensity": 0.1035,
-			"SystemPossible": true,
-			"SystemType": "low-panels",
-			"SuggestedPanelPower": 0.235,
-			"EstimatedPanelPrice": 150.0,
-			"SuggestedPanelExample": "Talesun - TP660P-235 - 235W",
-			"PanelsNeeded": 23,
-			"TotalPanelCost": 3450.0
-		},
-		"highSystem": {
-			"PercentageGenerated": 100.0,
-			"CalculatedSystemPower": 9.0,
-			"CalculatedSRequiredPowerDensity": 0.1725,
-			"SystemPossible": true,
-			"SystemType": "mid-panels",
-			"SuggestedPanelPower": 0.3,
-			"EstimatedPanelPrice": 210.0,
-			"SuggestedPanelExample": "SILFAB SOLAR SLA300M",
-			"PanelsNeeded": 30,
-			"TotalPanelCost": 6300.0
-		},
-		"angleData": {
-			"1": {
-				"cos": 0.35,
-				"angleDegrees": 69.512684885277338
-			},
-			"2": {
-				"cos": 0.42,
-				"angleDegrees": 65.165412510298424
-			},
-			"3": {
-				"cos": 0.5,
-				"angleDegrees": 60.000000000000007
-			},
-			"4": {
-				"cos": 0.56,
-				"angleDegrees": 55.944202257432089
-			},
-			"5": {
-				"cos": 0.59,
-				"angleDegrees": 53.842991799001162
-			},
-			"6": {
-				"cos": 0.62,
-				"angleDegrees": 51.683865526334259
-			},
-			"7": {
-				"cos": 0.61,
-				"angleDegrees": 52.410497035143145
-			},
-			"8": {
-				"cos": 0.6,
-				"angleDegrees": 53.13010235415598
-			},
-			"9": {
-				"cos": 0.55,
-				"angleDegrees": 56.632987030768248
-			},
-			"10": {
-				"cos": 0.42,
-				"angleDegrees": 65.165412510298424
-			},
-			"11": {
-				"cos": 0.39,
-				"angleDegrees": 67.045500598607191
-			},
-			"12": {
-				"cos": 0.32,
-				"angleDegrees": 71.337075115057516
+		"wind": {
+			"windSpeed": {
+				"1": 2.94,
+				"2": 3.23,
+				"3": 3.07,
+				"4": 2.66,
+				"5": 2.64,
+				"6": 2.3,
+				"7": 2.33,
+				"8": 2.38,
+				"9": 2.49,
+				"10": 2.49,
+				"11": 2.82,
+				"12": 3.07
 			}
 		}
 	},
