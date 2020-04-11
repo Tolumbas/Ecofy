@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -32,7 +32,7 @@
     <header class="header-fixed">
         <div class="container">
             <div class="row justify-content-end">
-                <div class="col-lg-4">
+                <div class="col-lg-4">  
                     <div class="logo-img-wapper">
                        <a href="index.html"> <img src="images/Logo.png" alt="logo"></a>
                     </div>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-img-wapper">
-                        <img src="images/about-one.jpg" alt="">
+                        <img src="images/indexfrontpic.jpg" alt="">
                         <div class="pulse-box">
                             <a href="//www.youtube.com/watch?v=XSGBVzeBUbk" data-lity="" class="pulse-icon"><i
                                     class="flaticon-right-arrow"></i></a>
@@ -117,7 +117,7 @@
     </section>
     <!-- End-About-Section -->
     <!-- Portfolio-section -->
-    <section class="ws-section-spacing bg-gray" id="ourteam">
+  <section class="ws-section-spacing bg-gray" id="ourteam">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -131,7 +131,7 @@
                     <div class="gallery-box">
                         <img src="images/Image-1.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                             <a class="default-btn">Andrey Gizdov</a>
                         </div>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                     <div class="gallery-box">
                         <img src="images/Image-3.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Sona Yavrumyan</a>
                         </div>
                     </div>
                 </div>
@@ -149,16 +149,50 @@
                     <div class="gallery-box">
                         <img src="images/Image-5.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Antoan Georgiev</a>
                         </div>
                     </div>
                 </div>
+
+
+                <!-- item --> <!--new-->
+                <div class="col-lg-4 col-md-6 col-sm-12 masonry">
+                    <div class="gallery-box">
+                        <img src="images/georgi.jpg" alt="gallery-1">
+                        <div class="overlay-img">
+                            <a class="default-btn">Georgi Hristov</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- item --> <!--new-->
+                <div class="col-lg-4 col-md-6 col-sm-12 masonry">
+                    <div class="gallery-box">
+                        <img src="images/dominykas.jpg" alt="gallery-1">
+                        <div class="overlay-img">
+                            <a class="default-btn">Dominykas Samulioni</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item --> <!--new-->
+                <div class="col-lg-4 col-md-6 col-sm-12 masonry">
+                    <div class="gallery-box">
+                        <img src="images/marek.jpg" alt="gallery-1">
+                        <div class="overlay-img">
+                            <a class="default-btn">Marek Pinto</a>
+                        </div>
+                    </div>
+                </div>
+
+               
                 <!-- item -->
                 <div class="col-lg-4 col-md-6 col-sm-12 masonry">
                     <div class="gallery-box">
                         <img src="images/Image-4.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Anton Stoyanov</a>
                         </div>
                     </div>
                 </div>
@@ -168,20 +202,20 @@
                     <div class="gallery-box">
                         <img src="images/Image-6.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Eimantas Mazeika</a>
                         </div>
                     </div>
                 </div>
                 <!-- item -->
                 <div class="col-lg-4 col-md-6 col-sm-12 masonry">
                     <div class="gallery-box">
-                        <img src="images/Image.jpg" alt="gallery-1">
+                        <img src="images/petras.jpg" alt="gallery-1">
                         <div class="overlay-img">
-                            <a href="portfolio-single.html" class="default-btn">view Work</a>
+                            <a class="default-btn">Petras Viciunas</a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>     
         </div>
     </section>
     <!-- End-portfolio-section-->
@@ -203,14 +237,7 @@
                             wonder which setup will be best for them. Ecofy gives you that answer with precision!</p>
                             <img src="images/ftestimony.png" alt="client-img">
                             <h3>Asya Asenova</h3>
-                        </div>
-                        <div class="item">
-                            <p>Who says airline websites are too complex to be responsive? The Work & Co technology team
-                                built a site that works  you are, so you have a great experience at any point of
-                                your trip,  to a mobile experience at any point of your trip. </p>
-                            <img src="images/testi-1.png" alt="client-img">
-                            <h3>Janet Simpson - Marketing Director</h3>
-                        </div>
+                        </div>                     
                     </div>
                 </div>
             </div>
@@ -316,7 +343,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3">
                     <div class="footer-logo">
-                       <a href="index.html"> <img src="images/Logo.png" alt="footer-logo" width=100% height=100%></a>
+                       <a href="index.html"> <img src="images/Logo.png" alt="footer-logo" width="1024" height="768"></a>
                     </div>
                 </div>              
             </div>
