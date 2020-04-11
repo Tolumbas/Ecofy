@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><title>Ecofy</title></head>
+<head><title>Ecofy</title>
+</head>
 
 <body>
     <!-- preloader -->
     <div id="preloader">
         <div class="container">
-            <h1>Crunching Numbers...</h1>
+            <h2 align=center>Crunching Numbers...</h2>
         </div>
     </div>
     <!-- Header-area -->
@@ -45,64 +46,55 @@
     <section class="ws-section-spacing contact-page">
     <div class="container">	 <h2 align="center">YOUR CHOICE:</h2>
      <p>Based on your coordinates, your budget and your monthly bills, our system has determined that
-                        your most viable option for economical power is <b>solar/wind power. </p>
+                        your most viable option for economical power is <b><span id="choiceEnergy">solar</span> power. </p>
                         </div>
         <div class="container">  <div class="row">   
-                    <div class="col-sm-12 col-md-6 align-self-center" id="barplot">
+                    <div class="col-sm-12 col-md-6 align-self-center" id="barplot1">
                     <h3 align="center">Solar power</h3>
-                        <canvas width=100% height=100% id="barplotcanvassolar"></canvas>                     						 
+                        <canvas width=100% height=100% id="barplotcanvassolar"></canvas>
+                        <h3 align="center">$$$ saved</h3>
+                        <canvas width=100% height=100% id="barplotcanvassolarsaves"></canvas>                      						 
                         <table class="table table-bordered">
                             <tr>
                                 <td>Energy Generated that month:</td>
-                                <td><span id="monthPower"></span>kW/h</td>
+                                <td><span id="monthPowerSolar"></span>kWh</td>
                             </tr>
                             <tr>
                                 <td>Total monthly saves:</td>
-                                <td><span id="monthSaves"></span>$</td>
+                                <td><span id="monthSavesSolar"></span>$</td>
                             </tr>
                             <tr>
                                 <td>Peak sun angle this month:</td>
-                                <td><span id="monthAngle"></span>°</td>
+                                <td><span id="monthAngleSolar"></span>°</td>
                             </tr>
                         </table>  
-                        <p>The system will outpay itself in <b>X months.</b></p>                                       
+                        <p>The system will outpay itself in <b><span id="solaroutpay">X</span> months.</b></p>                                       
                     </div>
-               <div class="col-sm-12 col-md-6 align-self-center" id="barplot">
+               <div class="col-sm-12 col-md-6 align-self-center" id="barplot2">
                     <h3 align="center">Wind power</h3>
-                        <canvas width=100% height=100% id="barplotcanvaswind"></canvas>                     						 
+                        <canvas width=100% height=100% id="barplotcanvaswind"></canvas>    
+                                                <h3 align="center">$$$ saved</h3>
+                         <canvas width=100% height=100% id="barplotcanvaswindsaves"></canvas>                     						 
                         <table class="table table-bordered">
                             <tr>
                                 <td>Energy Generated that month:</td>
-                                <td><span id="monthPower"></span>kW/h</td>
+                                <td><span id="monthPowerWind"></span>kWh</td>
                             </tr>
                             <tr>
                                 <td>Total monthly saves:</td>
-                                <td><span id="monthSaves"></span>$</td>
+                                <td><span id="monthSavesWind"></span>$</td>
                             </tr>
                             <tr>
-                                <td>Peak sun angle this month:</td>
-                                <td><span id="monthAngle"></span>°</td>
+                                <td>Peak wind speed this month:</td>
+                                <td><span id="monthAngleWind"></span>m/s</td>
                             </tr>
                         </table>  
-                        <p>The system will outpay itself in <b>X months.</b></p>                                             
+                        <p>The system will outpay itself in <b><span id="windoutpay">X</span> months.</b></p>                                             
                     </div>
                     </div> 
                     </div>       
     </section>
     <!-- Contact-info -->
-
-    <!-- Footer -->
-    <footer class="footer-space">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3">
-                    <div class="footer-logo">
-                        <a href="index.html"> <img src="images/logo-wht.png" alt="footer-logo"></a>
-                    </div>
-                </div>                
-            </div>
-        </div>
-    </footer>
     <!-- End-Footer -->
     <!-- Top-to-bottom -->
     <a href="#" id="btn-to-top"><i class="flaticon-up-arrow"></i></a>
