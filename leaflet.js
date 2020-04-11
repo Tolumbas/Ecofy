@@ -58,10 +58,10 @@ async function submit(e){
     }[jsonForm.invest_range];
     // debugger;
     let barDataSolar = [];
-    let barDataWind = [];
+    let barDataWind = [];   
     for (var a=1;a<=12;a++){
         barDataSolar.push(Math.round(data.energyTypes.solar.monthIrradiance[a]*data.energyTypes.solar[system].CalculatedSystemPower));
-        barDataWind.push(Math.round(data.energyTypes.wind.windSpeed[a]));
+        barDataWind.push(Math.round(data.energyTypes.wind["lowSystem"].MonthlyGeneration[a]));
     }
     // let barData = data.solar.monthIrradiance.map(p=>p * data[system].CalculatedSystemPower)
     
@@ -136,10 +136,11 @@ async function submit(e){
             $(`#monthAngleSolar`).innerHTML = data.energyTypes.solar.angleData[index].angleDegrees;
         }
         else{
-            let power = Math.round(data.energyTypes.solar.monthIrradiance[index]*data.energyTypes.solar[system].CalculatedSystemPower);
+            let power = data.energyTypes.wind["lowSystem"].MonthlyGeneration[index];
+            let saves = data.energyTypes.wind["lowSystem"].MonthlySaving[index];
             $(`#monthPowerWind`).innerHTML = power;
-            $(`#monthSavesWind`).innerHTML = power * jsonForm.price_per_kwh;
-            $(`#monthAngleWind`).innerHTML = data.energyTypes.solar.angleData[index].angleDegrees;
+            $(`#monthSavesWind`).innerHTML = saves;
+            $(`#monthAngleWind`).innerHTML = data.energyTypes.wind.windSpeed[index];
         }
     }    
 }
