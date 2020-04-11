@@ -186,6 +186,17 @@ async function submit(e){
 
 
     $("#choiceEnergy").innerHTML = data.reccomendedSystem;
+    if (data.reccomendedSystem == "solar"){
+        $("#barplot1").style.backgroundColor = "#DFD";
+    }
+    else if (data.reccomendedSystem == "solar"){
+        $("#barplot2").style.backgroundColor = "#DFD";
+    }
+    else if (data.reccomendedSystem == "hybrid solar/wind"){
+        $("#barplot1").style.backgroundColor = "#DFD";
+        $("#barplot2").style.backgroundColor = "#DFD";
+    }
+
 
     changeMonth(1,"Solar");
     changeMonth(1,"Wind");
