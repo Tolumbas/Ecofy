@@ -17,7 +17,6 @@ mymap.on('click',ev=>{
 })
 mymap.locate({setView:true});
 
-console.log('hi');
 
 $("form.contact-form").addEventListener('submit',submit,false);
 
@@ -35,14 +34,17 @@ async function submit(e){
     let jsonForSend = JSON.stringify(jsonForm);
     console.log(jsonForSend);
     /* Send json to back-end */
-    let data = await fetch("anton_data.json").then(file=>file.json());
+    // 
     
     let page3source = await fetch("results.html").then(html=>html.text());
     var parser = new DOMParser();
     var page3 = parser.parseFromString(page3source, 'text/html');
     
     document.body.innerHTML = page3.body.innerHTML;
-
+    
+    let data = await fetch(`https://ecofy-api.azurewebsites.net/api/predict?lat=${jsonForm.lat}&lon=${jsonForm.long}&kwhPrice=${jsonForm.price_per_kwh}&avg_monthlyBill=${jsonForm.monthly_bill}&availArea=60`)
+        .then(file=>file.json())
+        // .catch(e=>alert(`Server Error:${e}`));
     // await new Promise(res=>setTimeout(res,1000));
     
     document.body.removeChild($('#preloader'));
