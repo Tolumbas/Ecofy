@@ -47,8 +47,9 @@
      <p>Based on your coordinates, your budget and your monthly bills, our system has determined that
                         your most viable option for economical power is <b>solar/wind power. </p>
                         </div>
-        <div class="container">     <div class="row">   
+        <div class="container">  <div class="row">   
                     <div class="col-sm-12 col-md-6 align-self-center" id="barplot">
+                    <h3 align="center">Solar power</h3>
                         <canvas width=100% height=100% id="barplotcanvas"></canvas>                     						 
                         <table class="table table-bordered">
                             <tr>
@@ -63,14 +64,28 @@
                                 <td>Peak sun angle this month:</td>
                                 <td><span id="monthAngle"></span>°</td>
                             </tr>
-                        </table>                                         
+                        </table>  
+                        <p>The system will outpay itself in <b>X months.</b></p>                                       
                     </div>
-                     <div class="col-sm-12 col-md-6">     
-                            <div class="main-title">
-                                <h2 class="title mb-3">YOUR CHOICE: </h2>                             
-                                <h3>The system will outpay itself in <b>X months.</b></h3>
-                            </div>
-                        </div>
+               <div class="col-sm-12 col-md-6 align-self-center" id="barplot">
+                    <h3 align="center">Wind power</h3>
+                        <canvas width=100% height=100% id="barplotcanvas"></canvas>                     						 
+                        <table class="table table-bordered">
+                            <tr>
+                                <td>Energy Generated that month:</td>
+                                <td><span id="monthPower"></span>kW/h</td>
+                            </tr>
+                            <tr>
+                                <td>Total monthly saves:</td>
+                                <td><span id="monthSaves"></span>$</td>
+                            </tr>
+                            <tr>
+                                <td>Peak sun angle this month:</td>
+                                <td><span id="monthAngle"></span>°</td>
+                            </tr>
+                        </table>  
+                        <p>The system will outpay itself in <b>X months.</b></p>                                             
+                    </div>
                     </div> 
                     </div>       
     </section>
