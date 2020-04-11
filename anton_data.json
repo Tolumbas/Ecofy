@@ -1,5 +1,5 @@
 {
-	"API-version": "v0.2 alpha",
+	"API-version": "v0.3 alpha",
 	"energyTypes": {
 		"solar": {
 			"monthIrradiance": {
@@ -20,47 +20,45 @@
 			"avgMonthlyPowerConsumption": 6150,
 			"avgYearlyPowerConsumption": 73800,
 			"idealSystemPower": 55,
-			"maxPanelsThatFit": 36,
+			"maxPanelsThatFit": 3,
 			"lowSystem": {
 				"PercentageGenerated": 15,
 				"CalculatedSystemPower": 8.25,
-				"CalculatedRequiredPowerDensity": 0.15865,
-				"SystemPossible": true,
-				"SystemType": "mid-panels",
-				"SuggestedPanelPower": 0.3,
-				"EstimatedPanelPrice": 210,
-				"SuggestedPanelExample": "SILFAB SOLAR SLA300M",
-				"PanelsNeeded": 28,
-				"TotalPanelCost": 5880,
-				"EstimatedSystemCost": 8380,
-				"ROIMonths": 454.2,
-				"ROIYears": 37.8
+				"CalculatedRequiredPowerDensity": 1.65,
+				"SystemPossible": false,
+				"Message": "Unfortunatelly this configuration is unavailable, because the roof area you specified is not sufficient! But here is the best configuration, that is available for your available area... ",
+				"SuggestedPanelPower": 0.375,
+				"EstimatedPanelPrice": 310,
+				"SuggestedPanelExample": "LG NeON® R LG360Q1C-V5",
+				"PanelsNeeded": 2,
+				"TotalPanelCost": 620,
+				"MaxAvailablePower: ": 0.75
 			},
 			"midSystem": {
 				"PercentageGenerated": 60,
 				"CalculatedSystemPower": 33,
-				"CalculatedRequiredPowerDensity": 0.63462,
+				"CalculatedRequiredPowerDensity": 6.6,
 				"SystemPossible": false,
 				"Message": "Unfortunatelly this configuration is unavailable, because the roof area you specified is not sufficient! But here is the best configuration, that is available for your available area... ",
 				"SuggestedPanelPower": 0.375,
 				"EstimatedPanelPrice": 310,
 				"SuggestedPanelExample": "LG NeON® R LG360Q1C-V5",
-				"PanelsNeeded": 29,
-				"TotalPanelCost": 8990,
-				"MaxAvailablePower: ": 10.875
+				"PanelsNeeded": 2,
+				"TotalPanelCost": 620,
+				"MaxAvailablePower: ": 0.75
 			},
 			"highSystem": {
 				"PercentageGenerated": 100,
 				"CalculatedSystemPower": 55,
-				"CalculatedRequiredPowerDensity": 1.05769,
+				"CalculatedRequiredPowerDensity": 11,
 				"SystemPossible": false,
 				"Message": "Unfortunatelly this configuration is unavailable, because the roof area you specified is not sufficient! But here is the best configuration, that is available for your available area... ",
 				"SuggestedPanelPower": 0.375,
 				"EstimatedPanelPrice": 310,
 				"SuggestedPanelExample": "LG NeON® R LG360Q1C-V5",
-				"PanelsNeeded": 29,
-				"TotalPanelCost": 8990,
-				"MaxAvailablePower: ": 10.875
+				"PanelsNeeded": 2,
+				"TotalPanelCost": 620,
+				"MaxAvailablePower: ": 0.75
 			},
 			"angleData": {
 				"1": {
@@ -127,6 +125,43 @@
 				"10": 2.49,
 				"11": 2.82,
 				"12": 3.07
+			},
+			"lowSystem": {
+				"ReccomendedTurbinePower": 0.4,
+				"EstimatedTurbineDiameter": 1.6,
+				"EstimatedTurbinePrice": 400,
+				"EstimatedTurbineSystemPrice": 1100,
+				"YearlySavings": 10.51,
+				"ROIMonths": 1256.23,
+				"ROIYears": 104.69,
+				"MonthlyGeneration": {
+					"1": 40.84,
+					"2": 44.87,
+					"3": 42.64,
+					"4": 36.95,
+					"5": 36.67,
+					"6": 31.95,
+					"7": 32.36,
+					"8": 33.06,
+					"9": 34.59,
+					"10": 34.59,
+					"11": 39.17,
+					"12": 42.64
+				},
+				"MonthlySaving": {
+					"1": 0.95,
+					"2": 1.05,
+					"3": 1,
+					"4": 0.86,
+					"5": 0.86,
+					"6": 0.75,
+					"7": 0.76,
+					"8": 0.77,
+					"9": 0.81,
+					"10": 0.81,
+					"11": 0.91,
+					"12": 1
+				}
 			}
 		}
 	},

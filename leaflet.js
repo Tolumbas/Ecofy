@@ -42,7 +42,7 @@ async function submit(e){
     
     document.body.innerHTML = page3.body.innerHTML;
     
-    let data = await fetch(`https://ecofy-api.azurewebsites.net/api/predict?lat=${jsonForm.lat}&lon=${jsonForm.long}&kwhPrice=${jsonForm.price_per_kwh}&avg_monthlyBill=${jsonForm.monthly_bill}&availArea=60`)
+    let data = await fetch(`https://ecofy-api.azurewebsites.net/api/predict?lat=${jsonForm.lat}&lon=${jsonForm.long}&kwhPrice=${jsonForm.price_per_kwh}&avg_monthlyBill=${jsonForm.monthly_bill}&availArea=${jsonForm.roof_area}`)
         .then(file=>file.json())
         // .catch(e=>alert(`Server Error:${e}`));
     // await new Promise(res=>setTimeout(res,1000));
@@ -58,17 +58,17 @@ async function submit(e){
     }[jsonForm.invest_range];
     // debugger;
     let barDataSolar = [];
-    let barDataWind = [];
+    let barDataWind = [];   
     for (var a=1;a<=12;a++){
         barDataSolar.push(Math.round(data.energyTypes.solar.monthIrradiance[a]*data.energyTypes.solar[system].CalculatedSystemPower));
-        barDataWind.push(Math.round(data.energyTypes.wind.windSpeed[a]));
+        barDataWind.push(Math.round(data.energyTypes.wind["lowSystem"].MonthlyGeneration[a]));
     }
     // let barData = data.solar.monthIrradiance.map(p=>p * data[system].CalculatedSystemPower)
     
     
     ///SOLAR
-    var ctx = document.getElementById('barplotcanvassolar').getContext('2d');
-    var myChart = new Chart(ctx, {
+    var ctxSolar = document.getElementById('barplotcanvassolar').getContext('2d');
+    var myChartSolar = new Chart(ctxSolar, {
         type: 'bar',
         data: {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -87,56 +87,60 @@ async function submit(e){
                 }]
             },
             onClick:function(e){
-                let target = myChart.getElementAtEvent(e);
+                let target = myChartSolar.getElementAtEvent(e);
                 if (target.length){
                     let month = target[0]['_index']+1;
-                    changeMonth(month);
+                    changeMonth(month,"Solar");
                 }
             }
         }
     });
     /// WIND
-    // var myChart = new Chart(ctx, {
-    //     type: 'bar',
-    //     data: {
-    //         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    //         datasets: [{
-    //             label: 'kW/h Generated Wind',
-    //             data: barDataWind,
-    //             borderWidth: 1
-    //         }
-    //     },
-    //     options: {
-    //         scales: {
-    //             yAxes: [{
-    //                 ticks: {
-    //                     beginAtZero: true
-    //                 }
-    //             }]
-    //         },
-    //         onClick:function(e){
-    //             let target = myChart.getElementAtEvent(e);
-    //             if (target.length){
-    //                 let month = target[0]['_index']+1;
-    //                 changeMonth(month);
-    //             }
-    //         }
-    //     }
-    // });
+    var ctxWind = document.getElementById('barplotcanvaswind').getContext('2d');
+    var myChartWind = new Chart(ctxWind, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'kW/h Generated Wind',
+                data: barDataWind,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+            onClick:function(e){
+                let target = myChartWind.getElementAtEvent(e);
+                if (target.length){
+                    let month = target[0]['_index']+1;
+                    changeMonth(month,"Wind");
+                }
+            }
+        }
+    });
 
-    // ,{
-    //     label: 'kW/h Generated Wind',
-    //     data: barDataWind,
-    //     borderWidth: 1
-    // }]
+    changeMonth(1,"Solar");
+    changeMonth(1,"Wind");
 
-
-
-    changeMonth(1);
-    function changeMonth(index){
-        let power = Math.round(data.energyTypes.solar.monthIrradiance[index]*data.energyTypes.solar[system].CalculatedSystemPower);
-        $("#monthPower").innerHTML = power;
-        $("#monthSaves").innerHTML = power * jsonForm.price_per_kwh;
-        $("#monthAngle").innerHTML = data.energyTypes.solar.angleData[index].angleDegrees;
+    function changeMonth(index,type){
+        if (type == "Solar"){
+            let power = Math.round(data.energyTypes.solar.monthIrradiance[index]*data.energyTypes.solar[system].CalculatedSystemPower);
+            $(`#monthPowerSolar`).innerHTML = power;
+            $(`#monthSavesSolar`).innerHTML = power * jsonForm.price_per_kwh;
+            $(`#monthAngleSolar`).innerHTML = data.energyTypes.solar.angleData[index].angleDegrees;
+        }
+        else{
+            let power = data.energyTypes.wind["lowSystem"].MonthlyGeneration[index];
+            let saves = data.energyTypes.wind["lowSystem"].MonthlySaving[index];
+            $(`#monthPowerWind`).innerHTML = power;
+            $(`#monthSavesWind`).innerHTML = saves;
+            $(`#monthAngleWind`).innerHTML = data.energyTypes.wind.windSpeed[index];
+        }
     }    
 }
