@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vutix</title>
+    <title>Ecofy</title>
     <link rel="icon" href="images/fav.png" type="image/gif">
     <!-- bootstrap.min.css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -38,7 +38,7 @@
     <!-- preloader -->
     <div id="preloader"></div>
     <!-- Header-area -->
-    <header class="header-fixed header-wht">
+    <header class="header-fixed header-wht" style="z-index:1200">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-lg-4">
@@ -61,11 +61,10 @@
                             <a href="index.html"><img src="images/Logo.png" alt="logo" class="hide-logo"></a>
                             <nav>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                    <li><a href="blog.html">News</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                   <li><a href="index.html">Home</a></li>
+                                    <li><a href="index.html#aboutus">What do we do</a></li>
+                                    <li><a href="index.html#ourteam">Who are we</a></li>	                                  
+                                    <li><a href="index.html#contactus">Contact us</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -77,44 +76,47 @@
     <!-- Main-section -->
     <!-- End-Man-section -->
     <section class="ws-section-spacing contact-page">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <form class="contact-form">
                         <div class="form-group">
                             <label >Longitude: </label>
                             <input type="text" class="form-control" id="long" name="long"
-                                required="">
+                                required>
                         </div>
                         <div class="form-group">
                             <label >Latitude: </label>
-                            <input type="text" class="form-control" id="latt" name="latt"
+                            <input type="text" class="form-control" id="latt" name="lat"
                                 required="">
                         </div>
-                        <form>
-  										<input type="radio" id="low" name="budget" value="low">
-  											<label for="low">Low</label><br>
-  										<input type="radio" id="medium" name="budget" value="medium">
-  											<label for="medium">Medium</label><br>
-										<input type="radio" id="high" name="budget" value="high">
-  											<label for="high">High</label><br>
-								</form> 
+                        <input type="radio" id="low" name="invest_range" value="low">
+                            <label for="low">Low</label><br>
+                        <input type="radio" id="medium" name="invest_range" value="medium">
+                            <label for="medium">Medium</label><br>
+                        <input type="radio" id="high" name="invest_range" value="high">
+                            <label for="high">High</label><br>
                         <div class="form-group">
                             <label >Money paid for electricity last month: (in USD) *</label>
-                            <input type="money" class="form-control" id="monpaid" name="tmoneypaid"
+                            <input type="money" class="form-control" id="monpaid" name="monthly_bill"
                                 required="">
                         </div>
                          <div class="form-group">
-                            <label >Price for 1 kWh: *</label>
-                            <input type="money1" class="form-control" id="kwhprice" name="kwhprize"
+                            <label >Price for 1 kWh: (in USD)*</label>
+                            <input type="money1" class="form-control" id="kwhprice" name="price_per_kwh"
                                 required="">
                         </div>
-                        <button type="submit" class="default-btn">Submit</button>
+                        <div class="form-group">
+                            <label >Roof area: *</label>
+                            <input type="money" class="form-control" id="monpaid" name="roof_area"
+                                required="">
+                        </div>
+                        <button type="submit" id="submitButton" class="default-btn">Submit</button>
                     </form>
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                     <!-- OSM -->
-                    <div id="mapid" style="height:100%">
+                    <div id="mapid" style="height:100%;min-height:300px;cursor:crosshair;">
                         
                     </div>                        
                 </div>
@@ -130,7 +132,7 @@
                     <div class="footer-logo">
                         <a href="index.html"> <img src="images/logo-wht.png" alt="footer-logo"></a>
                     </div>
-                </div>
+                </div> <!--
                 <div class="col-lg-6">
                     <div class="foo-nav">
                         <ul>
@@ -150,7 +152,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </footer>
     <!-- End-Footer -->
@@ -175,6 +177,7 @@
     <!-- Map -->
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw&callback=initMap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="leaflet.js"></script>
 </body>
 
