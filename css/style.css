@@ -270,7 +270,7 @@ h4 {
 }
 
 .ws-section-spacing {
-	padding: 120px 0 90px;
+	padding: 120px 0 0;
 }
 
 .title-bottom-spacing {
@@ -562,10 +562,10 @@ h4 {
 }
 
 .logo-img-wapper {
-	width: 86px;
-	height: 30px;
-	position: absolute;
-	top: 37px;
+	width: 80%;
+	height: 100%;
+	/* position: absolute; */
+	/* top: 37px; */
 	z-index: 1;
 }
 /*----------------- Main-Slider ------------*/
@@ -809,11 +809,11 @@ main.hero-slide .item {
 /*----------------- Footer-area ---------------*/
 .footer-space {
 	background-color: #000;
-	padding: 80px 0;
+	padding: 20px 0;
 }
 
 .footer-logo {
-	width: 80px;
+	/* width: 80px; */
 }
 
 .foo-nav {
