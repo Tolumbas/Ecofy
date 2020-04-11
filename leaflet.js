@@ -67,8 +67,8 @@ async function submit(e){
     
     
     ///SOLAR
-    var ctx = document.getElementById('barplotcanvassolar').getContext('2d');
-    var myChart = new Chart(ctx, {
+    var ctxSolar = document.getElementById('barplotcanvassolar').getContext('2d');
+    var myChartSolar = new Chart(ctxSolar, {
         type: 'bar',
         data: {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -87,56 +87,59 @@ async function submit(e){
                 }]
             },
             onClick:function(e){
-                let target = myChart.getElementAtEvent(e);
+                let target = myChartSolar.getElementAtEvent(e);
                 if (target.length){
                     let month = target[0]['_index']+1;
-                    changeMonth(month);
+                    changeMonth(month,"Solar");
                 }
             }
         }
     });
     /// WIND
-    // var myChart = new Chart(ctx, {
-    //     type: 'bar',
-    //     data: {
-    //         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    //         datasets: [{
-    //             label: 'kW/h Generated Wind',
-    //             data: barDataWind,
-    //             borderWidth: 1
-    //         }
-    //     },
-    //     options: {
-    //         scales: {
-    //             yAxes: [{
-    //                 ticks: {
-    //                     beginAtZero: true
-    //                 }
-    //             }]
-    //         },
-    //         onClick:function(e){
-    //             let target = myChart.getElementAtEvent(e);
-    //             if (target.length){
-    //                 let month = target[0]['_index']+1;
-    //                 changeMonth(month);
-    //             }
-    //         }
-    //     }
-    // });
+    var ctxWind = document.getElementById('barplotcanvaswind').getContext('2d');
+    var myChartWind = new Chart(ctxWind, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'kW/h Generated Wind',
+                data: barDataWind,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+            onClick:function(e){
+                let target = myChartWind.getElementAtEvent(e);
+                if (target.length){
+                    let month = target[0]['_index']+1;
+                    changeMonth(month,"Wind");
+                }
+            }
+        }
+    });
 
-    // ,{
-    //     label: 'kW/h Generated Wind',
-    //     data: barDataWind,
-    //     borderWidth: 1
-    // }]
+    changeMonth(1,"Solar");
+    changeMonth(1,"Wind");
 
-
-
-    changeMonth(1);
-    function changeMonth(index){
-        let power = Math.round(data.energyTypes.solar.monthIrradiance[index]*data.energyTypes.solar[system].CalculatedSystemPower);
-        $("#monthPower").innerHTML = power;
-        $("#monthSaves").innerHTML = power * jsonForm.price_per_kwh;
-        $("#monthAngle").innerHTML = data.energyTypes.solar.angleData[index].angleDegrees;
+    function changeMonth(index,type){
+        if (type == "Solar"){
+            let power = Math.round(data.energyTypes.solar.monthIrradiance[index]*data.energyTypes.solar[system].CalculatedSystemPower);
+            $(`#monthPowerSolar`).innerHTML = power;
+            $(`#monthSavesSolar`).innerHTML = power * jsonForm.price_per_kwh;
+            $(`#monthAngleSolar`).innerHTML = data.energyTypes.solar.angleData[index].angleDegrees;
+        }
+        else{
+            let power = Math.round(data.energyTypes.solar.monthIrradiance[index]*data.energyTypes.solar[system].CalculatedSystemPower);
+            $(`#monthPowerWind`).innerHTML = power;
+            $(`#monthSavesWind`).innerHTML = power * jsonForm.price_per_kwh;
+            $(`#monthAngleWind`).innerHTML = data.energyTypes.solar.angleData[index].angleDegrees;
+        }
     }    
 }
