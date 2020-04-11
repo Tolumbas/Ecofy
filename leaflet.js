@@ -58,10 +58,16 @@ async function submit(e){
     }[jsonForm.invest_range];
     // debugger;
     let barDataSolar = [];
-    let barDataWind = [];   
+    let barDataWind = [];
+    let barDataSolarSaves =[];
+    let barDataWindSaves = [];
+
     for (var a=1;a<=12;a++){
-        barDataSolar.push(Math.round(data.energyTypes.solar.monthIrradiance[a]*data.energyTypes.solar[system].CalculatedSystemPower));
+        let solarpower = Math.round(data.energyTypes.solar.monthIrradiance[a]*data.energyTypes.solar[system].CalculatedSystemPower);
+        barDataSolar.push(solarpower);
+        barDataSolarSaves.push(solarpower *  jsonForm.price_per_kwh);
         barDataWind.push(Math.round(data.energyTypes.wind["lowSystem"].MonthlyGeneration[a]));
+        barDataWindSaves.push(data.energyTypes.wind["lowSystem"].MonthlySaving[a]);
     }
     // let barData = data.solar.monthIrradiance.map(p=>p * data[system].CalculatedSystemPower)
     
@@ -124,6 +130,60 @@ async function submit(e){
             }
         }
     });
+
+    /** Saves */
+
+
+    ///Solar saves
+    let ctxSolarSaves = $("#barplotcanvassolarsaves").getContext('2d');
+    var myChartSolarSaves = new Chart(ctxSolarSaves, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: '$ Saved',
+                data: barDataSolarSaves,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    ///Wind saves
+    let ctxWindSaves = $("#barplotcanvaswindsaves").getContext('2d');
+    var myChartWindSaves = new Chart(ctxWindSaves, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: '$ Saved',
+                data: barDataWindSaves,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+
+
+
+
+
 
     $("#choiceEnergy").innerHTML = data.reccomendedSystem;
 
