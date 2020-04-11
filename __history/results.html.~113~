@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><title>Ecofy</title></head>
+<head><title>Ecofy</title>
+</head>
 
 <body>
     <!-- preloader -->
     <div id="preloader">
         <div class="container">
-            <h1>Crunching Numbers...</h1>
+            <h2 align=center>Crunching Numbers...</h2>
         </div>
     </div>
     <!-- Header-area -->
@@ -50,38 +51,38 @@
         <div class="container">  <div class="row">   
                     <div class="col-sm-12 col-md-6 align-self-center" id="barplot">
                     <h3 align="center">Solar power</h3>
-                        <canvas width=100% height=100% id="barplotcanvas"></canvas>                     						 
+                        <canvas width=100% height=100% id="barplotcanvassolar"></canvas>                     						 
                         <table class="table table-bordered">
                             <tr>
                                 <td>Energy Generated that month:</td>
-                                <td><span id="monthPower"></span>kW/h</td>
+                                <td><span id="monthPowerSolar"></span>kW/h</td>
                             </tr>
                             <tr>
                                 <td>Total monthly saves:</td>
-                                <td><span id="monthSaves"></span>$</td>
+                                <td><span id="monthSavesSolar"></span>$</td>
                             </tr>
                             <tr>
                                 <td>Peak sun angle this month:</td>
-                                <td><span id="monthAngle"></span>°</td>
+                                <td><span id="monthAngleSolar"></span>°</td>
                             </tr>
                         </table>  
                         <p>The system will outpay itself in <b>X months.</b></p>                                       
                     </div>
                <div class="col-sm-12 col-md-6 align-self-center" id="barplot">
-                    <p>Wind power</p>
-                        <canvas width=100% height=100% id="barplotcanvas"></canvas>                     						 
+                    <h3 align="center">Wind power</h3>
+                        <canvas width=100% height=100% id="barplotcanvaswind"></canvas>                     						 
                         <table class="table table-bordered">
                             <tr>
                                 <td>Energy Generated that month:</td>
-                                <td><span id="monthPower"></span>kW/h</td>
+                                <td><span id="monthPowerWind"></span>kW/h</td>
                             </tr>
                             <tr>
                                 <td>Total monthly saves:</td>
-                                <td><span id="monthSaves"></span>$</td>
+                                <td><span id="monthSavesWind"></span>$</td>
                             </tr>
                             <tr>
-                                <td>Peak sun angle this month:</td>
-                                <td><span id="monthAngle"></span>°</td>
+                                <td>Peak wind speed this month:</td>
+                                <td><span id="monthAngleWind"></span>km/h</td>
                             </tr>
                         </table>  
                         <p>The system will outpay itself in <b>X months.</b></p>                                             
